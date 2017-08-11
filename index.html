@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/lib/mui.css" />
+    <link rel="stylesheet" href="css/src/index.css" />
+</head>
+<body>
+	<div id="index_app">
+		<div class="img-div">
+			<img src="css/src/login.jpg" />
+		</div>
+		<div class="login-div">
+			<div class="username-div">
+				<input id="username" type="text" placeholder="请输入账号" />
+			</div>
+			<div class="password-div">
+				<input id="password" type="text" placeholder="请输入密码" />
+			</div>
+		</div>
+		<div class="bt-div">
+			<div class="botton" @click="login">
+				<input type="button" value="登录" />
+			</div>
+			<div class="botton">
+				<input type="button" value="注册" />
+			</div>
+		</div>
+	</div>
+	
+   	
+   	<script type="text/javascript" src="js/lib/vue.min.js"></script>
+	<script type="text/javascript" src="js/lib/require.js" defer async="true"></script>
+	<script type="text/javascript" src="js/lib/require.js" data-main="js/src/index.js" ></script>
+</body>
+</html>

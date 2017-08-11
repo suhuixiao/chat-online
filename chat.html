@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/lib/mui.css" />
+    <link rel="stylesheet" href="css/lib/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="css/src/chat.css" />
+</head>
+<body>
+	<div id="app">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back  mui-pull-left"><span class="mui-icon mui-icon-back">chat</a>
+		    <div class="mui-title">聊天</div>
+		</header>
+	   	<div class="main-content">
+	   	    <div class="chat-content">
+	   	    	<div class="chat-line" v-for="( n , index ) in chatList">
+	   	    		<div class="oneself" v-if="n.id === id ">
+	   	    			<div class="chat-text text-right">
+	   	    				<div v-text="n.text"></div>
+	   	    			</div>
+	   	    			<div class="img-div">
+	   	    				<img :src="tpUrlOneself" />
+	   	    				<div class="border-div-right"></div>
+	   	    			</div>
+	   	    		</div>
+	   	    		<div class="other" v-if="n.id !== id ">
+	   	    			<div class="img-div"><img :src="tpUrlOther" /></div>
+	   	    			<div class="chat-text">
+	   	    				<div v-text="n.text"></div>
+	   	    				<div class="border-div-left"></div>
+	   	    			</div>
+	   	    		</div>
+	   	    	</div>
+	   	    </div>
+	   	</div>
+	   	<div class="bottom-content">
+	   		<div class="bottom-div"><i class="iconfont icon-yuyin-copy"></i></div>
+	   		<div class="bottom-div">
+	   			<input id="input-text" class="input" type="text" />
+	   		</div>
+	   		<div class="bottom-div">
+	   			<input @click="sentInfo" class="input botton" type="button" value="发送"/>
+	   		</div>
+	   	</div>
+	</div>
+	
+   	
+   	<script type="text/javascript" src="js/lib/vue.min.js"></script>
+   	<script src="js/lib/realtime.browser.js"></script>
+	<script type="text/javascript" src="js/lib/require.js" defer async="true"></script>
+	<script type="text/javascript" src="js/lib/require.js" data-main="js/src/chat.js" ></script>
+</body>
+</html>

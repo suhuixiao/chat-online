@@ -1,0 +1,113 @@
+html,body{
+	height: 100%;
+	background: #FFFFFF;
+	overflow: hidden;
+}
+.bottom-content{
+	width: 100%;
+	display:-webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row;
+    position: fixed;
+    bottom: 0;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    border-top: 1px solid #cccccc;
+}
+.iconfont{
+	font-size: 1.5rem;
+}
+.input{
+	height: 2.2rem !important;
+}
+.bottom-content div:nth-child(1){
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	text-align: center;
+}
+.bottom-content div:nth-child(2){
+	-webkit-box-flex: 6;
+	-webkit-flex: 6;
+	flex: 6;
+}
+.bottom-content div:nth-child(3){
+	-webkit-box-flex: 1.7;
+	-webkit-flex: 1.7;
+	flex: 1.7;
+	text-align: center;
+	margin-top: 0.3rem;
+}
+.mui-content{
+	width: 100%;
+	position: absolute;
+	margin-top: 2.8rem;
+	/*margin: 2.8rem 0;*/
+	overflow: auto;
+}
+.main-content{
+	margin-top: 2.8rem;
+	overflow: auto;
+}
+.oneself,.other{
+	display:-webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row;
+    margin:1rem 0.6rem;
+    position: relative;
+}
+.other{
+	float:left;
+}
+.oneself{
+	float: right;
+}
+.chat-line{
+	min-height: 5rem;
+}
+
+/*聊天文本框样式*/
+.chat-text{
+	border: 1px solid #cccccc;
+	line-height: 1.8rem;
+	padding: 0.5rem;
+	margin: 0 0.6rem;
+	border-radius: 0.4rem;
+	/*margin-bottom: 2rem;*/
+	
+}
+.img-div,img{
+	height: 3rem;
+	width: 3rem;
+}
+/*聊天框旁边的小箭头*/
+.border-div-left,.border-div-right{
+	position: absolute;
+	width: 0.5rem;
+	height: 0.5rem;
+	border: 1px solid #cccccc;
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg); 	/* IE 9 */
+	-moz-transform:rotate(45deg); 	/* Firefox */
+	-webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+	-o-transform:rotate(45deg);
+	background: #FFFFFF;
+}
+.border-div-left{
+	border-top: none;
+	border-right: none;
+	margin-top: -1.5rem;
+	margin-left: -0.8rem;
+}
+.border-div-right{
+	border-bottom: none;
+	border-left: none;
+	margin-top: -2.5rem;
+	margin-left: -0.9rem;
+	background: rgba(109, 220, 105, 0.94);
+}
+.text-right{
+	background: rgba(109, 220, 105, 0.94);
+}
