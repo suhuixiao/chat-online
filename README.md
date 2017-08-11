@@ -10,4 +10,4 @@
 3.测试
 
 效果截图：
-![image]()
+![image](https://github.com/suhuixiao/blog5/blob/master/1.png)
