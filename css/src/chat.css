@@ -60,9 +60,11 @@ html,body{
 }
 .other{
 	float:left;
+	/*text-align: left;*/
 }
 .oneself{
 	float: right;
+	/*text-align: right;*/
 }
 .chat-line{
 	min-height: 5rem;

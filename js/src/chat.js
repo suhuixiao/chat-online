@@ -4,7 +4,7 @@ define(['../lib/mui.min','../lib/require','../lib/jquery'],function(){
 	h = window.innerHeight;
 	h1 = $('.mui-bar-nav').height();
 	h2 = $('.bottom-content').height();
-	$('.main-content').height(h-h1-h2 + 'px');  
+	$('#main-content').height(h-h1-h2 + 'px');  
 	//初始化聊天
 	var Realtime = AV.Realtime;
 	var TextMessage = AV.TextMessage;
@@ -15,20 +15,20 @@ define(['../lib/mui.min','../lib/require','../lib/jquery'],function(){
 	//定义一个对象
 	var chat ={
 		textList:[]
-	} 
+	}
 	//vue实例
 	var vm = new Vue({
 		el:'#app',
 		data:{
 			//用户的id
-			id:'',
+			id:'boy',
 			//别人的id
 			otherId:'',
 			//自己头像地址
 			tpUrlOneself:'',
 			//别人的头像地址
 			tpUrlOther:'',
-			chatList:[]
+			chatList:[{id:'boy',text:'您好'},{id:'girl',text:'您好啊'}]
 		},
 		methods:{
 			sentInfo:function(){
@@ -49,19 +49,25 @@ define(['../lib/mui.min','../lib/require','../lib/jquery'],function(){
 				  	return conversation.send(new AV.TextMessage( chatText ));
 				}).then(function(message) {
 					console.log('发送给' + ' '+ vm.otherId , '发送成功！');
+					vm.showNewChat();
 				}).catch(console.error)
 			},
-			//用户聊天登录
+			//用户接收消息
 			chatLogin:function( id ){
 				// 用户 登录
 				realtime.createIMClient(id).then(function(id) {
 				  	id.on('message', function(message, conversation) {
 				  		chat.textList[chat.textList.length] = { id : id, text: message.text };
 						vm.chatList.push ( chat.textList[chat.textList.length-1] );
-				    	console.log('Message received: ' + message.text);
+				    	vm.showNewChat();
 				  	});
 				}).catch(console.error);
 			},
+			//当有滚动条时，让最新的聊天消息呈现在底部
+			showNewChat:function(){
+				var mc = document.getElementById('main-content');
+				mc.scrollTop =  mc.scrollHeight - mc.offsetHeight 
+			}
 			
 		},
 		mounted:function(){

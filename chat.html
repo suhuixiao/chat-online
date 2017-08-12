@@ -14,7 +14,7 @@
 		    <a class="mui-action-back  mui-pull-left"><span class="mui-icon mui-icon-back">chat</a>
 		    <div class="mui-title">聊天</div>
 		</header>
-	   	<div class="main-content">
+	   	<div class="main-content" id="main-content">
 	   	    <div class="chat-content">
 	   	    	<div class="chat-line" v-for="( n , index ) in chatList">
 	   	    		<div class="oneself" v-if="n.id === id ">
@@ -49,7 +49,7 @@
 	
    	
    	<script type="text/javascript" src="js/lib/vue.min.js"></script>
-   	<script src="js/lib/realtime.browser.js"></script>
+   	<script type="text/javascript" src="js/lib/realtime.browser.js" ></script>
 	<script type="text/javascript" src="js/lib/require.js" defer async="true"></script>
 	<script type="text/javascript" src="js/lib/require.js" data-main="js/src/chat.js" ></script>
 </body>
