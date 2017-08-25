@@ -9,7 +9,7 @@
              
 建议测试方法(下载到本地测试最好，直接测试加载较久)：
 
-1.打开2次网址：https://suhuixiao.github.io/blog5/index.html
+1.打开2次网址：https://suhuixiao.github.io/chat-online/index.html
 
 2.分别用以上两个账号登陆
 
@@ -17,4 +17,4 @@
 
 效果截图：
 
-![image](https://github.com/suhuixiao/blog5/blob/master/1.png)
+![image](https://github.com/suhuixiao/chat-online/blob/master/1.png)
